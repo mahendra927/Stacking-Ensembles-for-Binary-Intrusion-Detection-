@@ -1,0 +1,12 @@
+# Raw KDD Cup 99 files (2.1 GB) are not used by this study and exceed GitHub limits
+Dataset/
+# NSL-KDD is not redistributed; fetch it with scripts/fetch_nsl_kdd.py
+data/*.txt
+!data/SOURCE_AND_CITATION.txt
+*.download
+*.zip
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+desktop.ini

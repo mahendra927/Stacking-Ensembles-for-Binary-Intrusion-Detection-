@@ -1,0 +1,4 @@
+method,reported_accuracy_percent,dataset,target,exact_author_split_available,role
+PAPER_SVM,87.58,NSL-KDD,binary,False,historical context; not paired with our predictions
+PAPER_LR,88.86,NSL-KDD,binary,False,historical context; not paired with our predictions
+PAPER_KNN,98.24000000000001,NSL-KDD,binary,False,historical context; not paired with our predictions

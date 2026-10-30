@@ -1,0 +1,16 @@
+{
+  "complete": true,
+  "context": {
+    "protocol": "official",
+    "seed": 72,
+    "arm": "all"
+  },
+  "sha256": {
+    "metrics.csv": "931f488f277f8c2189f680002d103cd0928d2337ddba2a908f1a86eb3fa406a1",
+    "predictions.npz": "ae4bbd04e0a6f3d7f969acbbd4a544f07df7b12029229432a4a387dd4efcebb3",
+    "oof.npz": "535589d09f4f2e66f3f20357ef3e7cac64c577bbda3aab129c36468e5b47c1ab",
+    "oof_folds.csv": "f6e507a64f0245c64417be82492289d28e683fd320e8f69fd832c09a9a1cbe5b",
+    "selected_features.csv": "2e1ecedf938cc95cd0639713622dafc12a0be2c8250830b4ba503ab2277b8036",
+    "warnings.csv": "fa55aa399d24b18de3f69337c23105332a975b6598a17fb2b1ac1e1cf2f50383"
+  }
+}

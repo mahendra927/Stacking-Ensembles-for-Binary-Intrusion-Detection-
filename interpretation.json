@@ -1,0 +1,61 @@
+{
+  "messages": [
+    "JOURNAL | 5 seeds",
+    "Primary: accuracy, normal=0 versus attack=1; all methods share saved evaluation row IDs.",
+    "Primary controlled contrast: STACK versus rerun KNN on rf_top9_group, paper70.",
+    "Author split indices/feature list are unavailable; this is not an exact replication of 98.24%.",
+    "Bootstrap intervals resample exact-input groups conditional on each fitted model pair; seeds share data.",
+    "McNemar treats cases as independent; duplicate/dependent cases and multiple comparisons limit inference.",
+    "Do not pool the 5 repeated official-test predictions as independent observations.",
+    "paper70: STACK minus matched KNN = +1.183 accuracy points; positive seeds 5/5.",
+    "paper75: STACK minus matched KNN = +1.114 accuracy points; positive seeds 5/5.",
+    "official: STACK minus matched KNN = -1.561 accuracy points; positive seeds 0/5."
+  ],
+  "audit": {
+    "dataset": "NSL-KDD",
+    "source": {
+      "KDDTrain+.txt": {
+        "rows": 125973,
+        "sha256": "1b86d2f957b33082081bba410fe129b475efebcc13c9014c3f447c8271aadf95",
+        "url": "https://raw.githubusercontent.com/Jehuty4949/NSL_KDD/27bbbdf5c5cccf9970b8b6037a0f19dc09c5a0a9/KDDTrain+.txt",
+        "normal": 67343,
+        "attack": 58630
+      },
+      "KDDTest+.txt": {
+        "rows": 22544,
+        "sha256": "fa46b0935342616aa83b7c2578db355b6a7aaabbc492248172c7a1e8b7ab8f84",
+        "url": "https://raw.githubusercontent.com/Jehuty4949/NSL_KDD/27bbbdf5c5cccf9970b8b6037a0f19dc09c5a0a9/KDDTest+.txt",
+        "normal": 9711,
+        "attack": 12833
+      }
+    },
+    "mirror_is_unofficial": true,
+    "mirror_commit": "27bbbdf5c5cccf9970b8b6037a0f19dc09c5a0a9",
+    "original_author_split_available": false,
+    "difficulty_used_as_feature": false,
+    "train_duplicate_input_rows": 16,
+    "train_binary_conflict_groups": 7,
+    "official_test_overlap_rows": 664,
+    "row_policy": "Preserve official rows, including conflicts, for comparability; report overlaps separately",
+    "full_source_reference_case_margins": {
+      "protocol": "paper70",
+      "seed": 42,
+      "expected_figure3": {
+        "0": 20083,
+        "1": 17709
+      },
+      "observed": {
+        "0": 20083,
+        "1": 17709
+      },
+      "matches_paper_margins": true,
+      "exact_author_indices_proven": false
+    }
+  },
+  "status": {
+    "label": "JOURNAL | 5 seeds",
+    "planned_protocol_complete": true,
+    "exact_author_replication": false,
+    "engine": "nslkdd-direct-v2"
+  }
+}

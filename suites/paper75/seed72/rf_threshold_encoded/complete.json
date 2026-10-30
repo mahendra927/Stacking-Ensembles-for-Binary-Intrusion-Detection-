@@ -1,0 +1,16 @@
+{
+  "complete": true,
+  "context": {
+    "protocol": "paper75",
+    "seed": 72,
+    "arm": "rf_threshold_encoded"
+  },
+  "sha256": {
+    "metrics.csv": "7c616f41ebf984ea165fead2c9d64a1b6aaf81aaf37096cce006d239df67e768",
+    "predictions.npz": "f86807630279c931e4311daa223378e04dcf117eabd886cceac01760aa69d29c",
+    "oof.npz": "98b969270b6d1bf38a797be8eb9dab20886544a8d3b3ae56c468e2987e2f2282",
+    "oof_folds.csv": "fb780d6a00a9c98ab7aa4d3f33f0a288235bd7926de3fdf50c20a2ef4ed14dca",
+    "selected_features.csv": "9f07df9854da1f906a82defde490069334eac05b726ed1c270167082455515f9",
+    "warnings.csv": "fa55aa399d24b18de3f69337c23105332a975b6598a17fb2b1ac1e1cf2f50383"
+  }
+}

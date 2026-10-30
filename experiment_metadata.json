@@ -1,0 +1,100 @@
+{
+  "config": {
+    "profile": "journal",
+    "seeds": [
+      42,
+      52,
+      62,
+      72,
+      82
+    ],
+    "protocols": [
+      "paper70",
+      "paper75",
+      "official"
+    ],
+    "arms": [
+      "rf_threshold_encoded",
+      "rf_top9_group",
+      "all"
+    ],
+    "folds": 5,
+    "trees": 160,
+    "selector_trees": 300,
+    "selector_seed": 100,
+    "rf_threshold": 0.05,
+    "raw_top_k": 9,
+    "svm_c": 10.0,
+    "lr_max_iter": 100,
+    "knn_k": 5,
+    "jobs": 2,
+    "prediction_batch": 4096,
+    "smoke_train_per_class": 0,
+    "smoke_test_per_class": 0,
+    "bootstrap_repetitions": 1000,
+    "resume": false
+  },
+  "status": {
+    "label": "JOURNAL | 5 seeds",
+    "planned_protocol_complete": true,
+    "exact_author_replication": false,
+    "engine": "nslkdd-direct-v2"
+  },
+  "audit": {
+    "dataset": "NSL-KDD",
+    "source": {
+      "KDDTrain+.txt": {
+        "rows": 125973,
+        "sha256": "1b86d2f957b33082081bba410fe129b475efebcc13c9014c3f447c8271aadf95",
+        "url": "https://raw.githubusercontent.com/Jehuty4949/NSL_KDD/27bbbdf5c5cccf9970b8b6037a0f19dc09c5a0a9/KDDTrain+.txt",
+        "normal": 67343,
+        "attack": 58630
+      },
+      "KDDTest+.txt": {
+        "rows": 22544,
+        "sha256": "fa46b0935342616aa83b7c2578db355b6a7aaabbc492248172c7a1e8b7ab8f84",
+        "url": "https://raw.githubusercontent.com/Jehuty4949/NSL_KDD/27bbbdf5c5cccf9970b8b6037a0f19dc09c5a0a9/KDDTest+.txt",
+        "normal": 9711,
+        "attack": 12833
+      }
+    },
+    "mirror_is_unofficial": true,
+    "mirror_commit": "27bbbdf5c5cccf9970b8b6037a0f19dc09c5a0a9",
+    "original_author_split_available": false,
+    "difficulty_used_as_feature": false,
+    "train_duplicate_input_rows": 16,
+    "train_binary_conflict_groups": 7,
+    "official_test_overlap_rows": 664,
+    "row_policy": "Preserve official rows, including conflicts, for comparability; report overlaps separately",
+    "full_source_reference_case_margins": {
+      "protocol": "paper70",
+      "seed": 42,
+      "expected_figure3": {
+        "0": 20083,
+        "1": 17709
+      },
+      "observed": {
+        "0": 20083,
+        "1": 17709
+      },
+      "matches_paper_margins": true,
+      "exact_author_indices_proven": false
+    }
+  },
+  "complete_requested_grid": true,
+  "primary_metric": "accuracy",
+  "primary_evaluation_weight": "one vote per row",
+  "protocol_lock_sha256": "3550e40d8437b73f07b9c25e2d6f0eec336b1830d79c0bc36741fdd7240937b3",
+  "python": "3.13.18 (main, Oct 26 2026, 15:28:15) [GCC 13.3.0]",
+  "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+  "versions": {
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "scikit-learn": "1.7.2",
+    "xgboost": "3.4.1",
+    "lightgbm": "4.7.0",
+    "catboost": "1.2.10",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2"
+  }
+}

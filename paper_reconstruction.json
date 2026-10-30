@@ -1,0 +1,32 @@
+{
+  "doi": "10.1016/j.procs.2024.03.285",
+  "dataset": "NSL-KDD",
+  "target": "normal=0; attack=1",
+  "historical_accuracy": {
+    "PAPER_SVM": 0.8758,
+    "PAPER_LR": 0.8886,
+    "PAPER_KNN": 0.9824
+  },
+  "split_reconstruction": {
+    "primary": "paper70: shuffled, unstratified 70/30 on KDDTrain+; seed 42 reference",
+    "sensitivity": "paper75: shuffled, unstratified 75/25 on KDDTrain+",
+    "external": "official: KDDTrain+ -> KDDTest+",
+    "evidence": "Figure 3 totals 37792 (20083 normal, 17709 attack); standard KDDTrain+ with test_size=.30, random_state=42, stratify=None matches both class margins",
+    "limitation": "Paper also states 75/25 and calls 125973/22544 a 75/25 split; author indices and code not provided"
+  },
+  "preprocessing": "Training-only imputation, numeric min-max, categorical one-hot; difficulty excluded",
+  "feature_selection": {
+    "documented": "RF 300 trees, random_state=100, threshold=.05, reports nine features",
+    "encoded_threshold": "Literal post-encoding threshold interpretation; actual selected count is reported",
+    "group_top9": "Controlled group-aware alternative; exactly nine raw features, all their dummies retained",
+    "limitation": "Nine selected names and whether importances refer to raw or encoded features are not specified"
+  },
+  "baseline_parameters": {
+    "SVM": "SVC linear, C=10; seed varies; paper reference seed=42; gamma irrelevant for linear kernel",
+    "LR": "Uniform class weights, max_iter=100, threshold=.5; C=1, lbfgs and tolerance are reconstruction assumptions",
+    "KNN": "k=5, Euclidean, uniform weights; paper mentions 30 iterations, which is not a KNeighborsClassifier parameter",
+    "unspecified": "Other classifier/selector settings use recorded sklearn defaults, including RF criterion=gini; these are reconstruction assumptions"
+  },
+  "cross_validation": "Paper mentions ten-fold CV without sufficient split/results detail; default five-fold OOF here constructs stacking, not a claimed reproduction of that CV",
+  "claims": "Direct empirical comparison is against rerun baselines on identical saved cases; historical 98.24% is contextual, not a paired test or exact reproduction target"
+}

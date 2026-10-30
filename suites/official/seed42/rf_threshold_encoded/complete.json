@@ -1,0 +1,16 @@
+{
+  "complete": true,
+  "context": {
+    "protocol": "official",
+    "seed": 42,
+    "arm": "rf_threshold_encoded"
+  },
+  "sha256": {
+    "metrics.csv": "df7c32012d6575867bd7eec726990bede2141087ecaa3c8a488be4adc01e7d7f",
+    "predictions.npz": "7ee503d3ce88c5cd9a94c28f4e8b81dd022af3b98566ecd398f59f6a45f5686f",
+    "oof.npz": "8c2e90ea3fffbaaf2d7399c0e9ccd0c0609923f20d32595c768e3fcd08750e73",
+    "oof_folds.csv": "d052e9b983a613abdd1d07cc508dfa51a58be3b128f1fa9dd66830b5832fdd0b",
+    "selected_features.csv": "0230249603eda0150fe28cefae10dfee5c6bc49f60911d84b68c4047a16b8b43",
+    "warnings.csv": "fa55aa399d24b18de3f69337c23105332a975b6598a17fb2b1ac1e1cf2f50383"
+  }
+}

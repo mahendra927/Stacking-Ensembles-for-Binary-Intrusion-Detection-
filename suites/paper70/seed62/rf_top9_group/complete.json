@@ -1,0 +1,16 @@
+{
+  "complete": true,
+  "context": {
+    "protocol": "paper70",
+    "seed": 62,
+    "arm": "rf_top9_group"
+  },
+  "sha256": {
+    "metrics.csv": "f4de3c819294d3171a42be14a8d1af57aa0c6c6d13b8fdc8e188eac3956fe06e",
+    "predictions.npz": "cfd795f7aae3266c697e548b057b60bb9ad742754eb0f6b14b2e1459efe56a59",
+    "oof.npz": "9806d85db217db5db3c659eab59b92e30b50aa1a33c353b677a50d0481565c59",
+    "oof_folds.csv": "74b47fa963b3fb68b70be1347d3dac4785e5185bd256bbd1f46e65324db54080",
+    "selected_features.csv": "f90d34415b060ae602d8c2d705366cdabe27cdb27a5bc7ff2e14ff7a9654bdf9",
+    "warnings.csv": "fa55aa399d24b18de3f69337c23105332a975b6598a17fb2b1ac1e1cf2f50383"
+  }
+}

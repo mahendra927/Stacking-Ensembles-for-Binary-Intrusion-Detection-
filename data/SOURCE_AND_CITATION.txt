@@ -1,0 +1,6 @@
+NSL-KDD (2009), Canadian Institute for Cybersecurity, University of New Brunswick.
+M. Tavallaee, E. Bagheri, W. Lu, A. A. Ghorbani (2009), A Detailed Analysis of the KDD CUP 99 Data Set, CISDA.
+Official description and redistribution terms: https://www.unb.ca/cic/datasets/nsl.html
+The official page no longer distributes the data. These files are from an unofficial mirror, frozen at:
+https://raw.githubusercontent.com/Jehuty4949/NSL_KDD/27bbbdf5c5cccf9970b8b6037a0f19dc09c5a0a9/
+SHA-256 values are recorded in the experiment code and dataset audit.

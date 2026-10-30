@@ -1,0 +1,139 @@
+{
+  "engine": "nslkdd-direct-v2",
+  "config": {
+    "profile": "journal",
+    "seeds": [
+      42,
+      52,
+      62,
+      72,
+      82
+    ],
+    "protocols": [
+      "paper70",
+      "paper75",
+      "official"
+    ],
+    "arms": [
+      "rf_threshold_encoded",
+      "rf_top9_group",
+      "all"
+    ],
+    "folds": 5,
+    "trees": 160,
+    "selector_trees": 300,
+    "selector_seed": 100,
+    "rf_threshold": 0.05,
+    "raw_top_k": 9,
+    "svm_c": 10.0,
+    "lr_max_iter": 100,
+    "knn_k": 5,
+    "jobs": 2,
+    "prediction_batch": 4096,
+    "smoke_train_per_class": 0,
+    "smoke_test_per_class": 0,
+    "bootstrap_repetitions": 1000
+  },
+  "algorithm_signature": "7b7c3ec4e9c45213a8a3a8236ba25ffe089eeef4b98fc977181e6b238a7c601e",
+  "input_features": [
+    "duration",
+    "protocol_type",
+    "service",
+    "flag",
+    "src_bytes",
+    "dst_bytes",
+    "land",
+    "wrong_fragment",
+    "urgent",
+    "hot",
+    "num_failed_logins",
+    "logged_in",
+    "num_compromised",
+    "root_shell",
+    "su_attempted",
+    "num_root",
+    "num_file_creations",
+    "num_shells",
+    "num_access_files",
+    "num_outbound_cmds",
+    "is_host_login",
+    "is_guest_login",
+    "count",
+    "srv_count",
+    "serror_rate",
+    "srv_serror_rate",
+    "rerror_rate",
+    "srv_rerror_rate",
+    "same_srv_rate",
+    "diff_srv_rate",
+    "srv_diff_host_rate",
+    "dst_host_count",
+    "dst_host_srv_count",
+    "dst_host_same_srv_rate",
+    "dst_host_diff_srv_rate",
+    "dst_host_same_src_port_rate",
+    "dst_host_srv_diff_host_rate",
+    "dst_host_serror_rate",
+    "dst_host_srv_serror_rate",
+    "dst_host_rerror_rate",
+    "dst_host_srv_rerror_rate"
+  ],
+  "software": {
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "scikit-learn": "1.7.2",
+    "xgboost": "3.4.1",
+    "lightgbm": "4.7.0",
+    "catboost": "1.2.10",
+    "scipy": "1.18.1"
+  },
+  "dataset_sha256": {
+    "KDDTrain+.txt": "1b86d2f957b33082081bba410fe129b475efebcc13c9014c3f447c8271aadf95",
+    "KDDTest+.txt": "fa46b0935342616aa83b7c2578db355b6a7aaabbc492248172c7a1e8b7ab8f84"
+  },
+  "target": "binary normal=0 attack=1",
+  "primary_metric": "accuracy",
+  "primary_protocol": "paper70",
+  "reference_seed": 42,
+  "primary_target": "STACK__rf_top9_group",
+  "primary_comparator": "PAPER_KNN__rf_top9_group",
+  "exact_author_replication": false,
+  "paper": {
+    "doi": "10.1016/j.procs.2024.03.285",
+    "dataset": "NSL-KDD",
+    "target": "normal=0; attack=1",
+    "historical_accuracy": {
+      "PAPER_SVM": 0.8758,
+      "PAPER_LR": 0.8886,
+      "PAPER_KNN": 0.9824
+    },
+    "split_reconstruction": {
+      "primary": "paper70: shuffled, unstratified 70/30 on KDDTrain+; seed 42 reference",
+      "sensitivity": "paper75: shuffled, unstratified 75/25 on KDDTrain+",
+      "external": "official: KDDTrain+ -> KDDTest+",
+      "evidence": "Figure 3 totals 37792 (20083 normal, 17709 attack); standard KDDTrain+ with test_size=.30, random_state=42, stratify=None matches both class margins",
+      "limitation": "Paper also states 75/25 and calls 125973/22544 a 75/25 split; author indices and code not provided"
+    },
+    "preprocessing": "Training-only imputation, numeric min-max, categorical one-hot; difficulty excluded",
+    "feature_selection": {
+      "documented": "RF 300 trees, random_state=100, threshold=.05, reports nine features",
+      "encoded_threshold": "Literal post-encoding threshold interpretation; actual selected count is reported",
+      "group_top9": "Controlled group-aware alternative; exactly nine raw features, all their dummies retained",
+      "limitation": "Nine selected names and whether importances refer to raw or encoded features are not specified"
+    },
+    "baseline_parameters": {
+      "SVM": "SVC linear, C=10; seed varies; paper reference seed=42; gamma irrelevant for linear kernel",
+      "LR": "Uniform class weights, max_iter=100, threshold=.5; C=1, lbfgs and tolerance are reconstruction assumptions",
+      "KNN": "k=5, Euclidean, uniform weights; paper mentions 30 iterations, which is not a KNeighborsClassifier parameter",
+      "unspecified": "Other classifier/selector settings use recorded sklearn defaults, including RF criterion=gini; these are reconstruction assumptions"
+    },
+    "cross_validation": "Paper mentions ten-fold CV without sufficient split/results detail; default five-fold OOF here constructs stacking, not a claimed reproduction of that CV",
+    "claims": "Direct empirical comparison is against rerun baselines on identical saved cases; historical 98.24% is contextual, not a paired test or exact reproduction target"
+  },
+  "status": {
+    "label": "JOURNAL | 5 seeds",
+    "planned_protocol_complete": true,
+    "exact_author_replication": false,
+    "engine": "nslkdd-direct-v2"
+  }
+}

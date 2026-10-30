@@ -1,0 +1,16 @@
+{
+  "complete": true,
+  "context": {
+    "protocol": "official",
+    "seed": 42,
+    "arm": "rf_top9_group"
+  },
+  "sha256": {
+    "metrics.csv": "1760b6d0c4030934412851ed5594b3ad728cb0142cca6fe2867668a1256e6ccb",
+    "predictions.npz": "7cdb24341e83146a31ccba2733f463651e51b52a966bc74030fb8b374b3bf001",
+    "oof.npz": "39d69cb217eec40f559a32f36da9b175148d87571c62f9091134bf3bbe7d8202",
+    "oof_folds.csv": "d052e9b983a613abdd1d07cc508dfa51a58be3b128f1fa9dd66830b5832fdd0b",
+    "selected_features.csv": "86e48abe1ac79f4f3cc3df2c1416511878b360ba9b17c4b1664c63da6860a838",
+    "warnings.csv": "fa55aa399d24b18de3f69337c23105332a975b6598a17fb2b1ac1e1cf2f50383"
+  }
+}

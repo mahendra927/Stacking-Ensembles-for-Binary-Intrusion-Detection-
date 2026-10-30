@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this research package, please cite it as below."
+title: "NSL-KDD direct comparison: stacking vs. SVM, LR and KNN baselines (research package)"
+authors:
+  - family-names: "[To be completed]"
+    given-names: "[To be completed]"
+license: MIT
+version: "1.0.0"
+date-released: "2026-10-30"
+repository-code: "https://github.com/[username]/[repository]"
+keywords: [NSL-KDD, intrusion detection, stacking, reproducibility, paired evaluation]
+references:
+  - type: conference-paper
+    title: "A Detailed Analysis of the KDD CUP 99 Data Set"
+    authors:
+      - family-names: Tavallaee
+        given-names: M.
+      - family-names: Bagheri
+        given-names: E.
+      - family-names: Lu
+        given-names: W.
+      - family-names: Ghorbani
+        given-names: A. A.
+    year: 2009
+    doi: "10.1109/CISDA.2009.5356528"
+  - type: article
+    title: "Towards Detection of Network Anomalies using Machine Learning Algorithms on the NSL-KDD Benchmark Datasets"
+    authors:
+      - family-names: Vibhute
+        given-names: "[et al.]"
+    year: 2024
+    journal: "Procedia Computer Science"
+    volume: 233
+    start: 960
+    end: 969
+    doi: "10.1016/j.procs.2024.03.285"
